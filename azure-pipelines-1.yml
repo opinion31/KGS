@@ -1,0 +1,19 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Visual Studio Enterprise 구독 - MPN (b4592f60-1a62-47e9-b5ee-32e20159588d)'
+    appType: 'webAppLinux'
+    WebAppName: 'artiewebservicetest'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.war'
