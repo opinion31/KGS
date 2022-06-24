@@ -12,7 +12,7 @@ pool:
 steps:
 - task: ManualValidation@0
   inputs:
-    notifyUsers: 'artie.kim@spintech.co.kr'
+    notifyUsers: 'artie.kim@spintech.kr'
 - task: Gradle@2
   inputs:
     workingDirectory: ''
