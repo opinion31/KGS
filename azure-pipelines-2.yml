@@ -7,12 +7,12 @@ trigger:
 - main
 pool:
   vmImage: ubuntu-latest
-  environment: 'gfhfh'
 
 steps:
 - task: ManualValidation@0
   inputs:
-    notifyUsers: 'artie.kim@spintech.kr'
+    notifyUsers: 'artie.kim@spintech.co.kr'
+    instructions: "Hi, please validate"
 - task: Gradle@2
   inputs:
     workingDirectory: ''
