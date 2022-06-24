@@ -13,6 +13,8 @@ steps:
   inputs:
     notifyUsers: 'artie.kim@spintech.co.kr'
     instructions: "Hi, please validate"
+    onTimeout : 'reject'
+
 - task: Gradle@2
   inputs:
     workingDirectory: ''
