@@ -5,9 +5,9 @@
 
 trigger:
 - main
-environment: 'gfhfh'
 pool:
   vmImage: ubuntu-latest
+  environment: 'gfhfh'
 
 steps:
 - task: Gradle@2
