@@ -5,15 +5,16 @@
 
 trigger:
 - main
+
 pool:
   vmImage: ubuntu-latest
 
 steps:
 - task: ManualValidation@0
+  timeoutInMinutes : 1440
   inputs:
     notifyUsers: 'artie.kim@spintech.co.kr'
     instructions: "Hi, please validate"
-    onTimeout : 'reject'
 
 - task: Gradle@2
   inputs:
